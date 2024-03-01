@@ -1,6 +1,7 @@
 from tkinter import Tk, Label, StringVar, PhotoImage
 import requests
 
+hard_coded_auth = '123123123x'
 frameCnt = 24
 frames = []
 animation_id = None
@@ -23,7 +24,7 @@ animating = False
 
 def check_roll():
     global last_roll, animating
-    response = requests.get('http://localhost:5000/get_roll')
+    response = requests.get('http://localhost:5000/get_roll', headers={'Authorization': hard_coded_auth})
     data = response.json()
 
     if response.status_code == 200:

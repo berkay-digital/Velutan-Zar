@@ -1,17 +1,30 @@
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+hard_coded_auth = '123123123x'
 
 roll_number = None
 
+def authorize_request():
+    auth_key = request.headers.get('Authorization')
+    if auth_key != hard_coded_auth:
+        return False
+    return True
+
 @app.route('/set_roll', methods=['POST'])
 def set_roll():
+    if not authorize_request():
+        return jsonify({'error': 'Unauthorized'}), 401
+
     global roll_number
     roll_number = request.json.get('roll')
     return jsonify({'status': 'success'}), 200
 
 @app.route('/get_roll', methods=['GET'])
 def get_roll():
+    if not authorize_request():
+        return jsonify({'error': 'Unauthorized'}), 401
+
     global roll_number
     if roll_number is None:
         return jsonify({'error': 'No roll number set'}), 404
