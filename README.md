@@ -1,6 +1,7 @@
 # Velutan Zar
 
 Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması hazırladım. "Host" zar atabiliyor ve API aracılığıyla çıkan sayı "Client"lere gönderiliyor. Zar animasyonu vb. geliştirilebilir tabii ki, tkinter modülünde animasyonlarla uğraşmak biraz zor olabiliyor.
+
 ![Quick Look](./quick_look.gif)
 ## Kurulum ve Kullanım
 
