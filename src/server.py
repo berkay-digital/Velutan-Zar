@@ -1,14 +1,16 @@
 from flask import Flask, request, jsonify
+import json
+auth = json.load(open("./server.json")).get("auth")
 
 app = Flask(__name__)
-hard_coded_auth = "123123123x"
+
 
 roll_number = None
 
 
 def authorize_request():
     auth_key = request.headers.get("Authorization")
-    if auth_key != hard_coded_auth:
+    if auth_key != auth:
         return False
     return True
 

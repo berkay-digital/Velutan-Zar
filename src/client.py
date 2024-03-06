@@ -1,11 +1,14 @@
 from tkinter import Tk, Label, StringVar, PhotoImage
 import requests
+import json
 
-hard_coded_auth = "123123123x"
+auth = json.load(open("./server.json")).get("auth")
+host = json.load(open("./server.json")).get("host")
+
 frameCnt = 24
 frames = []
 animation_id = None
-dice_gif = "../img/dice.gif"
+dice_gif = "./img/dice.gif"
 
 
 def load_frames():
@@ -32,7 +35,7 @@ animating = False
 def check_roll():
     global last_roll, animating
     response = requests.get(
-        "http://localhost:5000/get_roll", headers={"Authorization": hard_coded_auth}
+        f"http://{host}/get_roll", headers={"Authorization": auth}
     )
     data = response.json()
 

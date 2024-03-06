@@ -1,17 +1,18 @@
 import requests
 import random
 from tkinter import Tk, Button
+import json
 
-hard_coded_auth = "123123123x"
-
+auth = json.load(open("./server.json")).get("auth")
+host = json.load(open("./server.json")).get("host")
 
 def send_roll():
     roll = random.randint(1, 20)
-    headers = {"Authorization": hard_coded_auth}
+    headers = {"Authorization": auth}
     requests.post(
-        "http://localhost:5000/set_roll", json={"roll": roll}, headers=headers
+        f"http://{host}/set_roll", json={"roll": roll}, headers=headers
     )
-    requests.post("http://localhost:5000/set_roll", json={"roll": roll})
+    requests.post(f"http://{host}/set_roll", json={"roll": roll})
     button.config(state="disabled")
     root.after(4000, lambda: button.config(state="normal"))
 
