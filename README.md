@@ -1,13 +1,13 @@
 # Velutan Zar
 
-Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması hazırladım. "Host" zar atabiliyor ve API aracılığıyla çıkan sayı "Client"lere gönderiliyor. Zar animasyonu vb. geliştirilebilir tabii ki, tkinter modülünde animasyonlarla uğraşmak biraz zor olabiliyor.
+Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması hazırladım. "Host" zar atabiliyor ve API aracılığıyla çıkan sayı "Client"lere gönderiliyor. Bu çok protatip bir versiyon, istek olursa çok daha geliştirebilirim.
 
-![Quick Look](./quick_look.gif)
+![Quick Look](img/quick_look.gif)
 ## Kurulum ve Kullanım
 
 1. Konsola `pip install -r -requirements.txt` yazın.
-2. Server dosyasını çalıştırın. `python3 server.py`
-3. Host ve Client dosyaları çalıştırsın. `python3 host.py` & `python3 client.py`
+2. Server dosyasını çalıştırın. `python3 src/server.py`
+3. Host ve Client dosyaları çalıştırsın. `python3 src/host.py` & `python3 src/client.py`
 4. Host ekranda çıkan butona bastığında bütün Clientler zarı görebiliyor olmalı.
 
 ## Katkıda Bulunma
