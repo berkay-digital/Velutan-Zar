@@ -5,10 +5,7 @@ Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması 
 ![Quick Look](img/quick_look.gif)
 ## Kurulum ve Kullanım
 
-1. Konsola `pip install -r -requirements.txt` yazın.
-2. Server dosyasını çalıştırın. `python3 src/server.py`
-3. Host ve Client dosyaları çalıştırsın. `python3 src/host.py` & `python3 src/client.py`
-4. Host ekranda çıkan butona bastığında bütün Clientler zarı görebiliyor olmalı.
+Bilgisayarınıza [Python](https://www.python.org/downloads/) yükleyin ve kurulum aşamasında "Add Python to PATH" seçeneğini kesinlikle işaretleyin. `server.json` dosyasını kendinize göre düzenleyin. Serverı başlatın. Eğer aynı ağa bağlı olmayacaksanız port açmalı veya sunucuya yüklemelisiniz, bana ulaşırsanız konuda yardımcı olabilirim. Host olacak kişi `run_host.bat` dosyasını, client olacak kişiler `run_client.bat` dosyasını çalıştırsın. Host butona bastığında bütün clientler zarı görmeli.
 
 ## Katkıda Bulunma
 
@@ -20,4 +17,4 @@ Bu proje MIT lisansı altında lisanslanmıştır - ayrıntılar için 'LICENSE'
 
 ## İletişim
 
-Sorularınız veya diğer sorgularınız için, lütfen 'contact@berkay.digital' adresine e-posta gönderin.
+Sorularınız veya diğer sorgularınız için, lütfen [contact@berkay.digital](mailto:contact@berkay.digital) adresine e-posta gönderin.
