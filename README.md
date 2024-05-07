@@ -1,6 +1,6 @@
 # Velutan Zar
 
-Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması hazırladım. "Host" zar atabiliyor ve API aracılığıyla çıkan sayı "Client"lere gönderiliyor. Bu çok protatip bir versiyon, istek olursa çok daha geliştirebilirim.
+Yayında kullanılan sistemi beğenmedikleri için küçük bir zar uygulaması hazırladım. "Host" zar atabiliyor ve API aracılığıyla çıkan sayı "Client"lere gönderiliyor. Bu çok prototip bir versiyon, istek olursa çok daha geliştirebilirim.
 
 ![Quick Look](img/quick_look.gif)
 ## Kurulum ve Kullanım
